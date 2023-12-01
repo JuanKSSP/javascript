@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+            background-color: rgb(118, 118, 175);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var nome = window.prompt('Qual é seu nome?') 
+        document.write(`Olá <strong>${nome}</strong>! seu nome tem ${nome.length} letras.</br>`) // Para conseguir usar o ${nome.length} tive que usar --> ` <-- esse simbolo porque nenhum outro funcionava.
+        document.write(`Seu nome em letras maiusculas é ${nome.toUpperCase()}</br>`)
+        document.write(`Seu nome em letras minusculas é ${nome.toLowerCase()}`)
+        // n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'}) <-- Isso é ussado para transforma tudo na moeda dita depois do currency
+        // n1.toFixed(20.replaced('.',',') <-- usado para colocar ',' em vez do '.'
+    </script>
+
+</body>
+</html>

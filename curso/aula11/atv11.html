@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indetidade</title>
+    <style>
+        body{
+            background-color: rgb(85, 85, 158);
+            text-align: center;
+            font: normal 20pt Arial;
+            color: white;
+        }
+        h1{
+            color: rgb(227, 196, 24);
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro</h1>
+    Em que país você mora?<input type="text" name="txtpaís" id="txtpaís">
+    <input type="button" value="analisar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var txtp = window.document.getElementById('txtpaís')
+            var res = window.document.getElementById('res')
+            var txtp = String(txtp.value)
+            var txtp = txtp.toUpperCase()
+            if (txtp == 'BRASIL' || txtp == 'BRAZIL') {
+                res.innerText = `Você é BRASILEIRO! `
+                res.innerHTML += `Você mora nesse país chamado ${txtp}.`
+            } else {
+                res.innerHTML = `Você é Estrangeiro, `
+                res.innerHTML += `Você mora nesse país chamado ${txtp}.`
+            }
+        }
+    </script>
+</body>
+</html>
